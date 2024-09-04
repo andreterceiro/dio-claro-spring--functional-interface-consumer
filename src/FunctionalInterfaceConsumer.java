@@ -9,6 +9,8 @@ public class FunctionalInterfaceConsumer {
         FunctionalInterfaceConsumer.way1();
         System.out.println("-----------");
         FunctionalInterfaceConsumer.way2();
+        System.out.println("-----------");
+        FunctionalInterfaceConsumer.way3();
     }
 
     private static void way1() {
@@ -33,5 +35,13 @@ public class FunctionalInterfaceConsumer {
     }
 
     private static void way3() {
+        FunctionalInterfaceConsumer.numeros.forEach(new Consumer<Integer>() {
+            @Override
+            public void accept(Integer n) {
+                if (n % 2 == 0) {
+                    System.out.println(n);
+                }
+            }
+        });
     }
 }
