@@ -17,17 +17,17 @@ public class FunctionalInterfaceConsumer {
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
-        FunctionalInterfaceConsumer.way1();
+        FunctionalInterfaceConsumer.forma1();
         System.out.println("-----------");
-        FunctionalInterfaceConsumer.way2();
+        FunctionalInterfaceConsumer.forma2();
         System.out.println("-----------");
-        FunctionalInterfaceConsumer.way3();
+        FunctionalInterfaceConsumer.forma3();
     }
 
     /**
      * One way to use the functional interface consumer
      */
-    private static void way1() {
+    private static void forma1() {
         Consumer<Integer> imprimirNumeroPar = numero -> {
             if (numero % 2 == 0) {
                 System.out.println(numero);
@@ -40,7 +40,7 @@ public class FunctionalInterfaceConsumer {
     /**
      * Another way to use the functional interface consumer
      */
-    private static void way2() {
+    private static void forma2() {
         Consumer<Integer> imprimirNumeroPar = numero -> {
             if (numero % 2 == 0) {
                 System.out.println(numero);
@@ -54,7 +54,7 @@ public class FunctionalInterfaceConsumer {
     /**
      * Another way to use the functional interface consumer
      */
-    private static void way3() {
+    private static void forma3() {
         FunctionalInterfaceConsumer.numeros.forEach(new Consumer<Integer>() {
             @Override
             public void accept(Integer n) {
